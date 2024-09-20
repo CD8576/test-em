@@ -1,0 +1,38 @@
+{
+  "name": "element-selector",
+  "version": "0.1.8",
+  "type": "module",
+  "description": "Module that allow selecting elements on page",
+  "main": "src/main.js",
+  "files": [
+    "dist",
+    "src/main.js"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "prettify": "npx prettier --write .",
+    "build:prod": "rm -rf dist && webpack --env production",
+    "build:debug": "rm -rf dist && webpack --env development",
+    "publish": "npm run lint && npm run prettify && npm run build:prod && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shpingalet007/element-selector.git"
+  },
+  "author": "shpingalet007",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/shpingalet007/element-selector/issues"
+  },
+  "homepage": "https://github.com/shpingalet007/element-selector#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.21.5",
+    "@webpack-cli/generators": "^3.0.3",
+    "babel-loader": "^9.1.2",
+    "babel-plugin-add-module-exports": "^1.0.4",
+    "eslint": "^8.40.0",
+    "prettier": "^2.8.8",
+    "webpack": "^5.82.0",
+    "webpack-cli": "^5.1.0"
+  }
+}
